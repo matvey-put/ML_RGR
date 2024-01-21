@@ -1,0 +1,16 @@
+notebook
+scikit-learn
+pandas
+matplotlib
+numpy
+sympy
+scipy
+seaborn
+tensorflow
+imblearn
+pycaret
+catboost
+xgboost
+lightgbm
+streamlit
+category-encoders
