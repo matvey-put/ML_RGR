@@ -98,7 +98,6 @@ data_concat = pd.concat([df.select_dtypes(include=['float64', 'int32']),
 
 custom_row= data_concat.loc[:0]
 
-st.write(custom_row)
 btn = st.button("Предсказать")
 if btn:
 
@@ -107,40 +106,40 @@ if btn:
     with open("./models/KNN.pkl", "rb") as f:
             KNN = pickle.load(f)
             pred = KNN.predict(custom_row)
-            st.write("KNN: " + str(int(pred[0])))
+            st.success("KNN: " + str(int(pred[0])))
 
     with open("./models/Logistic Regression.pkl", "rb") as f:
             LR = pickle.load(f)
             pred = LR.predict(custom_row)
-            st.write("Logistic Regression: " + str(int(pred[0])))
+            st.success("Logistic Regression: " + str(int(pred[0])))
 
     with open("./models/SVM.pkl", "rb") as f:
             SVM = pickle.load(f)
             pred = SVM.predict(custom_row)
-            st.write("SVM: " + str(int(pred[0])))
+            st.success("SVM: " + str(int(pred[0])))
 
     with open("./models/Bagging.pkl", "rb") as f:
             bg = pickle.load(f)
             pred = bg.predict(custom_row)
-            st.write("Bagging: " + str(int(pred[0])))
+            st.success("Bagging: " + str(int(pred[0])))
 
     with open("./models/Stacking.pkl", "rb") as f:
             stack = pickle.load(f)
             pred = stack.predict(custom_row)
-            st.write("Stacking: " + str(int(pred[0])))
+            st.success("Stacking: " + str(int(pred[0])))
 
     with open("./models/Gradient Boosting.pkl", "rb") as f:
             gb = pickle.load(f)
             pred = gb.predict(custom_row)
-            st.write("Gradient Boosting: " + str(int(pred[0])))
+            st.success("Gradient Boosting: " + str(int(pred[0])))
 
     with open("./models/KMeans.pkl", "rb") as f:
             KMeanS = pickle.load(f)
             pred = KMeanS.predict(custom_row)
-            st.write("KMeans: " + str(int(pred[0])))
+            st.success("KMeans: " + str(int(pred[0])))
     nn = tf.keras.models.load_model('./models/NN_Classification')
     pred = nn.predict(custom_row)
-    st.write("nn: " + str(int(pred[0])))
+    st.success("nn: " + str(int(pred[0])))
 
 
 
