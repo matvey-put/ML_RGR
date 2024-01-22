@@ -66,7 +66,7 @@ rain_today = st.checkbox('Был ли дождь сегодня?',value=False)
 if rain_today:
     rain_today = 1
 else: rain_today = 0
-st.write(df.columns)
+
 custom_df = pd.DataFrame([[location, min_temp, max_temp, rain_fall, evaporation, 
                     sun_shine, wind_gust_dir, max_wind, wind_dir_9am, wind_dir_3pm, 
                     wind_speed_9am, wind_speed_3pm, humidity_9am, humidity_3pm, pressure_9am, 

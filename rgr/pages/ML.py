@@ -11,6 +11,7 @@ from sklearn.model_selection import train_test_split
 import tensorflow as tf
 import pickle
 
+st.title('Машинное обучение')
 def Metric(model, X_test, y_test):
     y_pred = model.predict(X_test)
 
