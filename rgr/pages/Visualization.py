@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-uploaded_file = st.file_uploader("Выберите файл датасета", type=["csv"])
+uploaded_file = st.file_uploader("Выберите файл датасета с именем `weatherAUS.csv`", type=["csv"])
 
 if uploaded_file is not None:
     df = pd.read_csv(uploaded_file)
