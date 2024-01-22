@@ -1,4 +1,3 @@
-notebook
 scikit-learn
 pandas
 matplotlib
