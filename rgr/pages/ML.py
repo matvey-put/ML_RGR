@@ -14,10 +14,6 @@ import pickle
 st.title('Машинное обучение')
 def Metric(model, X_test, y_test):
     y_pred = model.predict(X_test)
-
-    # threshold = 0.5
-    # y_pred = (y_pred > threshold).astype(int)
-
     st.write('F1-score: {:.3f}'.format(f1_score(y_test, y_pred)))
     st.write('Accuracy: {:.3f}'.format(accuracy_score(y_test, y_pred)))
     st.write('Precision: {:.3f}'.format(precision_score(y_test, y_pred)))
@@ -74,39 +70,3 @@ if uploaded_file is not None:
         else :
             nn = tf.keras.models.load_model('./models/NN_Classification')
             MetricNN(nn, X_test, y_test)
-            # pred = nn.predict(custom_row)
-
-    # with open("./models/KMeans.pkl", "rb") as f:
-    #         KMeanS = pickle.load(f)
-    #         pred = KMeanS.predict(custom_row)
-    #         st.write("KMeans: " + str(int(pred[0])))
-    # nn = tf.keras.models.load_model('./models/NN_Classification')
-    # pred = nn.predict(custom_row)
-    # st.write("nn: " + str(int(pred[0])))
-
-        # iterImputer = IterativeImputer()
-        # Copy_date = df.copy(deep = True)
-        # iterImputer.fit(Copy_date.select_dtypes(include = ['float64']))
-
-        # data_iterImputer = iterImputer.transform(Copy_date.select_dtypes(include = ['float64']))
-
-        # data_iterImputer = pd.DataFrame(data_iterImputer, columns = Copy_date.select_dtypes(include = ['float64']).columns)
-
-        # data_iterImputer.columns
-
-        # df[['MinTemp', 'MaxTemp', 'Rainfall', 'Evaporation', 'Sunshine',
-        #     'WindGustSpeed', 'WindSpeed9am', 'WindSpeed3pm', 'Humidity9am',
-        #     'Humidity3pm', 'Pressure9am', 'Pressure3pm', 'Cloud9am', 'Cloud3pm',
-        #     'Temp9am', 'Temp3pm']]= data_iterImputer
-        
-        # df.dropna(inplace = True)
-
-        # df["Date"] = pd.to_datetime(df["Date"], format = '%Y-%m-%d')
-        # df['Year'] = df['Date'].dt.year
-        # df['Month'] = df['Date'].dt.month
-        # df['Day'] = df['Date'].dt.day
-        # df = df.drop(['Date'], axis=1)
-
-
-
-
