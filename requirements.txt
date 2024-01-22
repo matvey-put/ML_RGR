@@ -1,5 +1,5 @@
 notebook
-scikit-learn==1.2.2
+scikit-learn
 pandas
 matplotlib
 numpy
